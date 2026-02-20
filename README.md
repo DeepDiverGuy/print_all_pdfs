@@ -22,20 +22,20 @@ It handles everything automatically: printing 2 PDF pages per landscape sheet, s
 
 ## Setup
 
-**1. Clone or download** `print_pdfs.py` into any folder.
+**1. Clone or download** `print_all_pdfs.py` into any folder.
 
 **2. Install dependencies:**
 ```bash
 pip install pypdf pywin32
 ```
 
-**3. Set your printer name.** Open `print_pdfs.py` and edit line 41:
+**3. Set your printer name.** Open `print_all_pdfs.py` and edit line 41:
 ```python
 PRINTER_NAME = "EPSON L130 Series"   # ← replace with your printer's exact name
 ```
 Not sure of the name? Run:
 ```bash
-python print_pdfs.py --list-printers
+python print_all_pdfs.py --list-printers
 ```
 
 ---
@@ -43,7 +43,7 @@ python print_pdfs.py --list-printers
 ## Usage
 
 ```bash
-python print_pdfs.py <directory> <front|back> [--printer "Printer Name"]
+python print_all_pdfs.py <directory> <front|back> [--printer "Printer Name"]
 ```
 
 ### Arguments
@@ -71,7 +71,7 @@ Wait for all pages to finish printing.
 
 **Step 3 — Print the back sides:**
 ```bash
-python print_pdfs.py "C:\path\to\your\pdfs" back
+python print_all_pdfs.py "C:\path\to\your\pdfs" back
 ```
 
 > The script processes PDFs in alphabetical order on both passes, so the pages will always line up correctly.
@@ -117,7 +117,7 @@ The script automatically appends a **blank sheet** at the end of the back-side j
 ## Example
 
 ```
-$ python print_pdfs.py "F:/Documents/Assignments" front
+$ python print_all_pdfs.py "F:/Documents/Assignments" front
 
 Found 3 PDF file(s) in 'F:/Documents/Assignments'
 Printer  : EPSON L130 Series
